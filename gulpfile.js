@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     header  = require('gulp-header'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
+    sourcemaps = require('gulp-sourcemaps'),
     package = require('./package.json');
 
 
@@ -24,12 +25,14 @@ var banner = [
 
 gulp.task('css', function () {
     return gulp.src('src/scss/style.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({errLogToConsole: true}))
     .pipe(autoprefixer('last 4 version'))
     .pipe(gulp.dest('.'))
     .pipe(cssnano())
     // .pipe(rename({ suffix: '.min' }))
     .pipe(header(banner, { package : package }))
+    .pipe(sourcemaps.write('.'))        
     .pipe(gulp.dest('.'))
     .pipe(browserSync.reload({stream:true}));
 });
