@@ -22,18 +22,38 @@
 
 <body <?php body_class(); ?>>
 
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'est_' ); ?></a>
-
 	<header id="masthead" class="site-header">
+			<div class='logo'>
+				<?php 
+					if ( function_exists( 'the_custom_logo' ) ) {
+						the_custom_logo();
+					}
+				?>
+			</div>
 
+			<div class='contact'>
+				<div class='contact__phone'>
+						<a class="" href="tel:+48667946077">
+                            667 946 077
+                            <span class="icon fas fa-phone-volume header__contact--telicon "></span>
+                        </a>
+					
+				</div>
+				<div>
+					
+				</div>
+			
+			</div>
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'est_' ); ?></button>
 			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
 			?>
 		</nav>
 	</header>
