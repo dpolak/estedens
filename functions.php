@@ -121,7 +121,6 @@ add_action( 'widgets_init', 'est__widgets_init' );
  */
 function est__scripts() {
 	wp_enqueue_style( 'est_-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.4.2/css/all.css' );
 
 	wp_enqueue_script('est_-js-scripts', get_template_directory_uri() .'/js/js-scripts.js', array('jquery'), null, true);
 
