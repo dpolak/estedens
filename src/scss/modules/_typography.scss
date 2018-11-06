@@ -8,3 +8,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
+$primaryfont: 'Roboto', sans-serif;
+
+@include min-xs {
+  body {
+    font-size: 16px;
+  }
+}
+
