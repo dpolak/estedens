@@ -1,0 +1,101 @@
+.c-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+    border-radius: 25px;
+    padding: 10px;
+    transition: $transition;
+    position: relative;
+    text-align: center;
+    font-size:1.6rem;
+    &:visited {
+        color: inherit;
+    }
+    &:hover {
+        transform: $scale;
+    }
+    &--primary {
+        color: $ctheme3;
+        background-color: $ctheme4;
+        border-color: $ctheme3; // border-bottom: 1px solid $ctheme4;
+        &:hover {
+            color: $ctheme4;
+            background-color: $ctheme3;
+        }
+    }
+    &--secondary {
+        color: $ctheme4;
+        &:hover {
+            color: $ctheme5;
+        }
+    }
+    &--phone {
+        position: relative;
+        text-align: center;
+        margin-right:30px;
+        width:240px;
+        font-size:2rem;
+        .c-icon {
+            color: $ctheme4;
+            background-color: $ctheme3;
+            border: 1px solid $ctheme4;
+        }
+        &:hover {
+            .c-icon {
+                border-radius: 1px solid $ctheme4;
+                background-color: $ctheme4;
+                color: $ctheme3;
+            }
+        }
+    }
+    &--address {
+        position: relative;
+        margin-right:30px;
+        .c-icon {
+            border: 1px solid $ctheme4;
+            color: $ctheme4;
+        }
+        &:hover {
+            .c-icon {
+                background-color: $ctheme4;
+                color: $ctheme3;
+            }
+        }
+    }
+}
+
+.c-icon {
+    margin: 5px;
+    padding: 15px;
+    border-radius: 50px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    &--phone {
+        position: absolute;
+        transform: rotate(90deg);
+        right: -30px;
+        top: -10px;
+    }
+    &--address {
+        position: absolute;
+        right: -30px;
+        top: -10px;
+    }
+    &--facebook {
+        &:visited {
+            color: inherit;
+        }
+        border: 1px solid $ctheme4;
+        color: $ctheme4;
+        &:hover {
+            background-color: $ctheme4;
+            color: $ctheme3;
+            transform: $scale;
+        }
+    }
+}
