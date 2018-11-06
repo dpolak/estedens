@@ -1,8 +1,16 @@
 //----------------------------------*\
+// VENDOR
+//----------------------------------*/
+
+@import 'wordpress/_underscores.scss';
+
+
+//----------------------------------*\
 // SCSS MIXINS
 //----------------------------------*/
 
 @import 'mixins/_position.scss';
+@import 'mixins/_common.scss';
 
 //----------------------------------*\
 // CONFIG MODULES
@@ -13,6 +21,11 @@
 @import 'modules/_clearfix.scss';
 @import 'modules/_defaults.scss';
 @import 'modules/_normalize.scss';
+@import 'modules/_typography.scss';
+@import 'modules/animations.scss';
+
+
+
 //----------------------------------*\
 // PARTIALS
 //----------------------------------*/
@@ -32,7 +45,6 @@
 @import 'modules/_buttons.scss';
 @import 'modules/_inputs.scss';
 @import 'modules/_lists.scss';
-@import 'modules/_typography.scss';
 @import 'modules/_misc.scss';
 @import 'modules/_app.scss';
 
@@ -46,8 +58,3 @@
 
 @import 'vendor/_external.scss';
 
-//----------------------------------*\
-// VENDOR
-//----------------------------------*/
-
-@import 'wordpress/_underscores.scss';
