@@ -4,8 +4,36 @@
 
 /* Custom js - theme related - end */
 
+init();
+console.log('tes');
+function init(){
+	uiHandler();
+}
 
+function uiHandler(){
+	mobileNavHandler();
+}
 
+function mobileNavHandler(){
+	var navMenuBtn = document.querySelector('.c-btn--mobile'),
+		navContainer = document.querySelector('.c-nav'),
+		isActive = false;
+
+	navMenuBtn.addEventListener('click', function(){
+		if(!isActive){
+			navContainer.classList.add('is-active');
+			navMenuBtn.classList.add('is-active');
+			isActive = !isActive;
+		}
+		else {
+			navContainer.classList.remove('is-active');
+			navMenuBtn.classList.remove('is-active');
+			isActive = !isActive;
+		}
+		
+	})
+
+}
 
 /*  */
 /* Wordpress related - underscores theme */
