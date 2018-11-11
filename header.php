@@ -55,9 +55,12 @@
 											
 				</div>
 			</div>
-			<div class='nav c-nav-desktop'>
+			<div class='nav c-nav'>
+				<button class="c-btn c-btn--mobile" aria-controls="primary-menu" aria-expanded="false">
+						 <span class='fas fa-bars'></span>	
+				</button>
 				<nav id="site-navigation" class="c-desktop-nav__wrapper main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'est_' ); ?></button>
+					
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
