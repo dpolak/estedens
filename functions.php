@@ -131,7 +131,7 @@ function est__scripts() {
 
 	// JS
 
-	wp_enqueue_script( 'est_-js-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery',null,true), filemtime( get_stylesheet_directory() . '/js/scripts.js' ) );
+	wp_enqueue_script( 'est_-js', get_template_directory_uri() . '/js/js-scripts.js', array('jquery'), time(), true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
