@@ -64,6 +64,30 @@
             }
         }
     }
+    &--mobile {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        top: 15px;
+        right: 30px;
+        @include min-md {
+            display:none;
+        }
+        color:$ctheme1;
+        background-color: $ctheme3;
+        border-radius: 1px solid $ctheme1;
+        &:hover{
+            color:$ctheme3;
+            background-color: $ctheme4;
+            border-color: $ctheme4;
+            
+        }
+    }
+    &--mobile.is-active {
+        color:$ctheme3;
+        background-color: $ctheme4;
+        border-color: $ctheme4;
+    }
 }
 
 .c-icon {
